@@ -16,7 +16,7 @@
         </StackLayout>
         <Label x:Name="gameResults" Text="Wynik tego losowania: " HorizontalOptions="Center" Margin="0,10,0,10"/>
         <Label x:Name="finalScore" Text="Wynik gry: " HorizontalOptions="Center" Margin="0,10,0,10"/>
-        <Button Text="RESETUJ WYNIK" BackgroundColor="Chocolate" HorizontalOptions="Center" TextColor="White" CornerRadius="10" Margin="0,10,0,10"/>
+        <Button Text="RESETUJ WYNIK" BackgroundColor="Chocolate" HorizontalOptions="Center" TextColor="White" CornerRadius="10" Margin="0,10,0,10" Clicked="ResetujWynik"/>
     </StackLayout>
 
 </ContentPage>

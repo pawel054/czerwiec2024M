@@ -11,6 +11,7 @@ namespace GraKosci
     public partial class MainPage : ContentPage
     {
         int finalSum = 0;
+        int numersSum = 0;
         public MainPage()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace GraKosci
         private void RzutKoscmi(object sender, EventArgs e)
         {
             int[] randomNumbers = new int[5];
-            int numersSum = 0;
+            numersSum = 0;
             bool[] countedNumbers = new bool[randomNumbers.Length];
             Random random = new Random();
             for (int i = 0; i < 5; i++)
@@ -53,6 +54,21 @@ namespace GraKosci
                 }
             }
             finalSum += numersSum;
+            gameResults.Text = $"Wynik tego losowania: {numersSum.ToString()}";
+            finalScore.Text = $"Wynik gry: {finalSum.ToString()}";
+        }
+
+        private void ResetujWynik(object sender, EventArgs e)
+        {
+            image1.Source = ImageSource.FromFile("question.jpg");
+            image2.Source = ImageSource.FromFile("question.jpg");
+            image3.Source = ImageSource.FromFile("question.jpg");
+            image4.Source = ImageSource.FromFile("question.jpg");
+            image5.Source = ImageSource.FromFile("question.jpg");
+
+            finalSum = 0;
+            numersSum = 0;
+
             gameResults.Text = $"Wynik tego losowania: {numersSum.ToString()}";
             finalScore.Text = $"Wynik gry: {finalSum.ToString()}";
         }
